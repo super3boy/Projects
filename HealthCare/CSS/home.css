@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+:root{
+    --red:#F50057;
+    --black:#354046;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    transition: all .2s linear;
+    list-style: none;
+}
+*::selection{
+    background-color: var(--black);
+    color: #fff;
+}
+html{
+    font-size: 60%;
+}
+.button{
+    height:3.5rem;
+    width: 9rem;
+    background:var(--red);
+    color:#fff;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    border-radius: .5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    margin:1rem 0.5rem;
+    border: 0px;
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    top: -100%; left: 0;
+    height:100%;
+    width: 100%;
+    background-color: var(--black);
+    z-index: -1;
+    transition: .2s linear;
+}
+
+.button:hover:before{
+    top: 0%;
+}
+
+.button:hover{
+    box-shadow: .1rem .5rem var(--red),0 .3rem .5rem rgba(0,0,0,.3);
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    padding: 1rem;
+    z-index: 1000;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    color: var(--black);
+}
+header a:hover{
+    color: var(--red);
+}
+header .container .logo{
+    font-size: 3rem;
+}
+header .container .logo span {
+    color: var(--red);
+}
+header .nav ul{
+    margin: 0; padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .nav ul li{
+    margin: 0 1rem;
+}
+header .nav ul a{
+    font-size: 2rem;
+}
+header .nav ul a button{
+    font-size: 2rem;
+}
+.navbtn{
+    font-size: 2rem;
+    border-radius: 0.4rem;
+}
+header .fa-bars{
+    font-size: 3.5rem;
+    color: var(--red);
+    cursor: pointer;
+    display: none;
+}
+header .fa-times{
+    transform: rotate(180deg);
+}
+.home .content h1{
+    font-size:5rem;
+    color: var(--black);
+}
+.home .content h1 span{
+    color: var(--red);
+}
+.home .content h3{
+    font-size:4rem;
+    color: var(--black);
+}
+.home .content .search-input{
+    height:50px;
+    font-size:14pt;
+}
+.h2, h2 {
+    font-size: 11rem;
+    color: rgba(128, 128, 128, 0.100);
+}
+.h3, h3 {
+    font-size: 6rem;
+    color: var(--black);
+}
+.vote{
+    bottom: 0px;
+    right: 50%px;
+    border-radius: 7px 7px 0px 0px;
+    background-color: var(--red);
+}
+.pic-layer{
+    position: relative;
+    top: 0;
+    overflow: hidden;
+}
+.pic-layer:hover .layer{
+    opacity: 1;
+}
+.layer
+{
+    background-color: #000000c2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: all 0.6s;
+}
+.title-cards{
+    color: var(--black);
+    font-size:2rem;
+    cursor: pointer;
+}
+.title-cards:hover{
+    color: var(--red);
+}
+.overview{
+    font-size:1.5rem;
+}
+.info p{
+    font-size: 2rem;
+    color: var(--black);
+}
+.info h4{
+    font-size: 3rem;
+}
+.icon-color{
+    color: var(--red);
+}
+.footer
+{
+    background-color: rgb(34, 34, 34);
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer h1 span{
+    color: #F50057;
+}
+/********************************************** MEDIA QUERIES ***********************************************/
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+    header .fa-bars{
+        display: block;
+    }
+    header .nav{
+        width: 95%;
+        position: fixed;
+        top: -100rem; left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 0 100vh rgba(0,0,0,0.2);
+        border-radius: .5rem;
+        border: .3rem solid var(--red)!important;
+        background-color: #fff;
+        opacity: 0;
+    }
+    header .nav ul{
+        width: 100%;
+        flex-flow: column;
+        padding: 2rem 0 ;
+    }
+    header .nav ul li{
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+    header .nav ul li a{
+        font-size: 3rem;
+        display: block;
+    }
+    header .nav ul li .navbtn{
+        font-size: 3rem;
+    }
+    header .nav-toggle{
+        opacity: 1;
+        top: 50%;
+    }
+}

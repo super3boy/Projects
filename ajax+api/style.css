@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'News Cycle', sans-serif;
+    background-color: rgb(26, 26, 26);
+}
+#img-cursor{
+    cursor: pointer;
+}
+.vote{
+    top: 0px;
+    right: 20px;
+    border-radius: 0px 0px 7px 7px;
+}
+.pic-layer{
+    position: relative;
+    top: 0;
+    overflow: hidden;
+}
+.pic-layer:hover .layer{
+    opacity: 1;
+}
+.layer
+{
+    background-color: #000000c2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: all 0.6s;
+}
+.title{
+    font-family: 'Bebas Neue', cursive;
+}
+.overview{
+    font-family: 'ABeeZee', sans-serif;
+}
